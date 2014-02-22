@@ -131,6 +131,33 @@ h1,h2,h3,h4,h5, .lead {
   background: linear-gradient(45deg, #00908c 0%, #3eb44a 50%, #c9da2a 100%);
   @include text-gradient();
 }
+/* Cisco Vendor Kit Doesn't
+   Use Border Box Sizing which 
+   screws up the search box. This fixes it. */
+#fw-mbs {
+  *, *:before, *:after {
+    box-sizing: content-box;
+  }
+}
+/* Cisco Vendor makes visited
+   links changed to default browser color which is ugly.
+   this makes things look a bit better */
+a:visited {
+  color: #999;
+}
+/* Overrides to vendor kit on footer
+   to make it suit the look and feel of the 
+   page better */
+#fw-mb-w1 #framework-footer {
+  background: transparent;
+  color: #CCC;
+  margin: 0;
+  padding: 20px 0 20px 0;
+  border: none;
+  a {
+    color: #FFF;
+  }
+}
 // Disable text gradient on FF & IE
 .lt-ie9 .text-gradient,
 .no-flexbox .text-gradient {
@@ -395,6 +422,7 @@ h1,h2,h3,h4,h5, .lead {
     .btn-link {
       padding-top: 30px !important;
       font-weight: 300;
+      color: $brand-primary !important;
       &:hover {
         text-decoration: none;
       }
