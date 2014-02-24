@@ -133,7 +133,8 @@ h1,h2,h3,h4,h5, .lead {
 }
 /* Cisco Vendor Kit Doesn't
    Use Border Box Sizing which 
-   screws up the search box. This fixes it. */
+   screws up the appearance on the search box 
+   due to conflicts with twitter bootstrap */
 #fw-mbs {
   *, *:before, *:after {
     box-sizing: content-box;
@@ -148,14 +149,17 @@ a:visited {
 /* Overrides to vendor kit on footer
    to make it suit the look and feel of the 
    page better */
-#fw-mb-w1 #framework-footer {
-  background: transparent;
-  color: #CCC;
-  margin: 0;
-  padding: 20px 0 20px 0;
-  border: none;
-  a {
-    color: #FFF;
+#fw-mb {
+  background-repeat: repeat-x;
+  #framework-footer {
+    background: transparent;
+    color: #CCC;
+    margin: 0 !important;
+    padding: 20px 0 20px 0;
+    border: none;
+    a {
+      color: #FFF;
+    }
   }
 }
 // Disable text gradient on FF & IE
