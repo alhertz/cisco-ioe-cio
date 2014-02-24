@@ -246,26 +246,26 @@ module.exports = function (grunt) {
                 }]
             }
         },
-        // htmlmin: {
-        //     dist: {
-        //         options: {
-        //             collapseBooleanAttributes: true,
-        //             collapseWhitespace: true,
-        //             removeAttributeQuotes: true,
-        //             removeCommentsFromCDATA: true,
-        //             removeEmptyAttributes: true,
-        //             removeOptionalTags: true,
-        //             removeRedundantAttributes: true,
-        //             useShortDoctype: true
-        //         },
-        //         files: [{
-        //             expand: true,
-        //             cwd: '<%= yeoman.dist %>',
-        //             src: '{,*/}*.html',
-        //             dest: '<%= yeoman.dist %>'
-        //         }]
-        //     }
-        // },
+        htmlmin: {
+            dist: {
+                options: {
+                    collapseBooleanAttributes: true,
+                    collapseWhitespace: true,
+                    removeAttributeQuotes: true,
+                    removeCommentsFromCDATA: true,
+                    removeEmptyAttributes: true,
+                    removeOptionalTags: true,
+                    removeRedundantAttributes: true,
+                    useShortDoctype: true
+                },
+                files: [{
+                    expand: true,
+                    cwd: '<%= yeoman.dist %>',
+                    src: '{,*/}*.html',
+                    dest: '<%= yeoman.dist %>'
+                }]
+            }
+        },
 
         // By default, your `index.html`'s <!-- Usemin block --> will take care of
         // minification. These next options are pre-configured if you do not wish
